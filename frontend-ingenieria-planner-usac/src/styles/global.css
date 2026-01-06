@@ -1,0 +1,73 @@
+/* ===== Reset & Base ===== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+}
+
+/* ===== Theme variables ===== */
+/* DARK por defecto */
+
+:root {
+  /* Backgrounds */
+  --bg: #0b1220;
+  --bg-elevated: rgba(15, 23, 42, 0.9);
+
+  /* Text */
+  --text: #e5e7eb;
+  --text-muted: #94a3b8;
+
+  /* Accent */
+  --primary: #38bdf8;
+
+  /* UI */
+  --navbar-height: 80px;
+  --border-subtle: rgba(255, 255, 255, 0.08);
+}
+
+/* LIGHT MODE */
+[data-theme="light"] {
+  --bg: #f8fafc;
+  --bg-elevated: rgba(255, 255, 255, 0.9);
+
+  --text: #0f172a;
+  --text-muted: #475569;
+
+  --primary: #0284c7;
+  --border-subtle: rgba(15, 23, 42, 0.08);
+}
+
+/* ===== Global usage ===== */
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, sans-serif;
+
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+/* Links */
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: 0.85;
+}
+
+/* Text helpers */
+.text-muted {
+  color: var(--text-muted);
+}
