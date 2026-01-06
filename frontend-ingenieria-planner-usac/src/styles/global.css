@@ -1,5 +1,3 @@
-/* ===== Reset & Base ===== */
-
 *,
 *::before,
 *::after {
@@ -14,39 +12,62 @@ body {
   min-height: 100%;
 }
 
-/* ===== Theme variables ===== */
-/* DARK por defecto */
-
 :root {
-  /* Backgrounds */
-  --bg: #0b1220;
-  --bg-elevated: rgba(15, 23, 42, 0.9);
+  --bg: #0a0f1c;
+  --bg-elevated: rgba(18, 24, 38, 0.95);
 
-  /* Text */
-  --text: #e5e7eb;
-  --text-muted: #94a3b8;
+  --text: #e6edf7;
+  --text-muted: #7b8ba1;
 
-  /* Accent */
-  --primary: #38bdf8;
+  --primary: #3b82f6;
 
-  /* UI */
+  --border-subtle: rgba(59, 130, 246, 0.12);
+
   --navbar-height: 80px;
-  --border-subtle: rgba(255, 255, 255, 0.08);
+  --navbar-bg: rgba(24, 33, 54, 0.95);
+  --navbar-text: #f0f6ff;
+  --navbar-text-muted: #7b8ba1;
+
+  --navbar-accent: linear-gradient(
+    90deg,
+    #3b82f6,
+    #60a5fa
+  );
+
+  --navbar-border: linear-gradient(
+    90deg,
+    rgba(59, 130, 246, 0.6),
+    rgba(162, 73, 250, 0.6)
+  );
 }
 
-/* LIGHT MODE */
+
+
 [data-theme="light"] {
-  --bg: #f8fafc;
-  --bg-elevated: rgba(255, 255, 255, 0.9);
+  --bg: #f6f8fc;
+  --bg-elevated: rgba(255, 255, 255, 0.95);
 
-  --text: #0f172a;
-  --text-muted: #475569;
+  --text: #0b1220;
+  --text-muted: #5b6478;
 
-  --primary: #0284c7;
+  --primary: #2563eb;
+
   --border-subtle: rgba(15, 23, 42, 0.08);
-}
 
-/* ===== Global usage ===== */
+  --navbar-bg: rgba(255, 255, 255, 0.9);
+  --navbar-text: #0b1220;
+  --navbar-text-muted: #5b6478;
+  --navbar-accent: linear-gradient(
+    90deg,
+    #2563eb,
+    #7174ee
+  );
+  --navbar-border: linear-gradient(
+    90deg,
+    rgba(37, 99, 235, 0.60),
+    rgba(99, 102, 241, 0.60)
+  );
+}
 
 body {
   background-color: var(--bg);
@@ -57,7 +78,6 @@ body {
   transition: background-color 0.25s ease, color 0.25s ease;
 }
 
-/* Links */
 a {
   color: var(--primary);
   text-decoration: none;
@@ -67,7 +87,6 @@ a:hover {
   opacity: 0.85;
 }
 
-/* Text helpers */
 .text-muted {
   color: var(--text-muted);
 }

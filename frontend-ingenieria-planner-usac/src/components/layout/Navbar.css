@@ -4,9 +4,13 @@
   width: 100%;
   height: var(--navbar-height);
 
-  background-color: var(--bg-elevated);
-  backdrop-filter: blur(8px);
-  border-bottom: 1px solid var(--border-subtle);
+  background-color: var(--navbar-bg);
+  backdrop-filter: blur(10px);
+
+  border-bottom: 2px solid transparent;
+  border-image: var(--navbar-border) 1;
+  box-shadow: 0 2px 12px rgba(56, 189, 248, 0.15);
+  backdrop-filter: blur(10px);
 
   z-index: 100;
 }
@@ -23,30 +27,31 @@
 }
 
 .navbar-logo {
-  font-size: 1.25rem;
+  font-size: 1.75rem;
   font-weight: 600;
-  color: var(--text);
+  color: var(--navbar-text);
   text-decoration: none;
   white-space: nowrap;
 }
 
 .navbar-links {
   display: flex;
-  gap: 2rem;
+  gap: 3rem;
 }
 
 .navbar-links a {
   position: relative;
-  font-size: 0.95rem;
+  font-size: 1.25rem;
   font-weight: 500;
-  color: var(--text-muted);
+  color: var(--navbar-text-muted);
   text-decoration: none;
+
   transition: color 0.2s ease;
 }
 
 .navbar-links a:hover,
 .navbar-links a.active {
-  color: var(--text);
+  color: var(--navbar-text);
 }
 
 .navbar-links a::after {
@@ -56,7 +61,8 @@
   bottom: -6px;
   width: 0;
   height: 2px;
-  background-color: var(--primary);
+
+  background: var(--navbar-accent);
   transition: width 0.2s ease;
 }
 
@@ -74,26 +80,29 @@
 .theme-toggle {
   background: none;
   border: none;
-  color: var(--text-muted);
+  color: var(--navbar-text);
   font-size: 1.1rem;
   cursor: pointer;
+
   transition: color 0.2s ease, transform 0.2s ease;
 }
 
 .theme-toggle:hover {
-  color: var(--primary);
+  color: var(--navbar-accent);
   transform: scale(1.1);
 }
 
 .profile-link {
   font-size: 1.2rem;
-  color: var(--text-muted);
+  color: var(--navbar-text);
   text-decoration: none;
-  transition: color 0.2s ease;
+
+  transition: color 0.2s ease, transform 0.2s ease;
 }
 
 .profile-link:hover {
-  color: var(--primary);
+  color: var(--navbar-accent);
+  transform: scale(1.1);
 }
 
 @media (max-width: 768px) {

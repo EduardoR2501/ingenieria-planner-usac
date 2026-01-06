@@ -15,18 +15,10 @@ const Navbar = () => {
         </NavLink>
 
         <nav className="navbar-links">
-          <NavLink to="/" end>
-            Home
-          </NavLink>
-          <NavLink to="/pensum">
-            Pensum
-          </NavLink>
-          <NavLink to="/classrooms">
-            Salones
-          </NavLink>
-          <NavLink to="/schedules">
-            Horario
-          </NavLink>
+          <NavLink to="/" end>Home</NavLink>
+          <NavLink to="/pensum">Pensum</NavLink>
+          <NavLink to="/classrooms">Salones</NavLink>
+          <NavLink to="/schedules">Horario</NavLink>
         </nav>
 
         <div className="navbar-actions">
@@ -36,7 +28,7 @@ const Navbar = () => {
           </button>
 
           <NavLink to="/profile" className="profile-link" aria-label="Perfil">
-            <User size={30} />
+            <User size={35} />
           </NavLink>
 
         </div>
